@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6714B3E31A6C8AB300F8ACA7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6714B3E21A6C8AB300F8ACA7 /* FacebookSDK.framework */; };
 		6714B3EB1A6F92A000F8ACA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6714B3E91A6F92A000F8ACA7 /* Main.storyboard */; };
 		6714B3F11A6F936F00F8ACA7 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6714B3F01A6F936F00F8ACA7 /* ProfileViewController.m */; };
 		67E10CD91A6C590700DF53DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E10CD81A6C590700DF53DD /* main.m */; };
@@ -17,6 +16,9 @@
 		67E10CE71A6C590700DF53DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E10CE61A6C590700DF53DD /* Images.xcassets */; };
 		67E10CEA1A6C590700DF53DD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E10CE81A6C590700DF53DD /* LaunchScreen.xib */; };
 		67E10CF61A6C590700DF53DD /* attendTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E10CF51A6C590700DF53DD /* attendTests.m */; };
+		94C681AF1A7A025E0051020B /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C681AE1A7A025E0051020B /* EventTableViewCell.m */; };
+		94C681B11A7A05C70051020B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C681B01A7A05C70051020B /* FacebookSDK.framework */; };
+		94C681B41A7A08F50051020B /* EventsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C681B31A7A08F50051020B /* EventsTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +32,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6714B3E21A6C8AB300F8ACA7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		6714B3EA1A6F92A000F8ACA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6714B3EF1A6F936F00F8ACA7 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		6714B3F01A6F936F00F8ACA7 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
@@ -47,6 +48,11 @@
 		67E10CEF1A6C590700DF53DD /* attendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = attendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E10CF41A6C590700DF53DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67E10CF51A6C590700DF53DD /* attendTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = attendTests.m; sourceTree = "<group>"; };
+		94C681AD1A7A025E0051020B /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
+		94C681AE1A7A025E0051020B /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
+		94C681B01A7A05C70051020B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		94C681B21A7A08F50051020B /* EventsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsTableView.h; sourceTree = "<group>"; };
+		94C681B31A7A08F50051020B /* EventsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6714B3E31A6C8AB300F8ACA7 /* FacebookSDK.framework in Frameworks */,
+				94C681B11A7A05C70051020B /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +77,7 @@
 		6714B3E11A6C8A9100F8ACA7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6714B3E21A6C8AB300F8ACA7 /* FacebookSDK.framework */,
+				94C681B01A7A05C70051020B /* FacebookSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,6 +115,10 @@
 				67E10CD61A6C590700DF53DD /* Supporting Files */,
 				6714B3EF1A6F936F00F8ACA7 /* ProfileViewController.h */,
 				6714B3F01A6F936F00F8ACA7 /* ProfileViewController.m */,
+				94C681AD1A7A025E0051020B /* EventTableViewCell.h */,
+				94C681AE1A7A025E0051020B /* EventTableViewCell.m */,
+				94C681B21A7A08F50051020B /* EventsTableView.h */,
+				94C681B31A7A08F50051020B /* EventsTableView.m */,
 			);
 			path = attend;
 			sourceTree = "<group>";
@@ -241,8 +251,10 @@
 			files = (
 				67E10CDC1A6C590700DF53DD /* AppDelegate.m in Sources */,
 				67E10CDF1A6C590700DF53DD /* attend.xcdatamodeld in Sources */,
+				94C681AF1A7A025E0051020B /* EventTableViewCell.m in Sources */,
 				67E10CE21A6C590700DF53DD /* ViewController.m in Sources */,
 				67E10CD91A6C590700DF53DD /* main.m in Sources */,
+				94C681B41A7A08F50051020B /* EventsTableView.m in Sources */,
 				6714B3F11A6F936F00F8ACA7 /* ProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +382,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/jeffreydecker/Documents/FacebookSDK,
+					/Users/jdecker/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = attend/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -385,6 +398,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/jeffreydecker/Documents/FacebookSDK,
+					/Users/jdecker/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = attend/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

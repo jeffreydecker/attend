@@ -30,8 +30,8 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    ProfileViewController *profileView = ( ProfileViewController *) [segue destinationViewController];
-    profileView.userData = self.userData;
+//    ProfileViewController *profileView = ( ProfileViewController *) [segue destinationViewController];
+//    profileView.userData = self.userData;
 }
 
 #pragma mark - FBLoginViewDelegate Methods
@@ -39,7 +39,7 @@
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
     NSLog(@"user info: %@", user);
     self.userData = user;
-    [self performSegueWithIdentifier:@"login_success" sender:self];
+    [self performSegueWithIdentifier:@"show_events" sender:self];
 }
 
 @end

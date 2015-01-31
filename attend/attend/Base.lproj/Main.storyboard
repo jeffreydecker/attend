@@ -37,11 +37,12 @@
                     <connections>
                         <outlet property="fbLoginView" destination="fiH-zF-LWb" id="z0w-yU-tyI"/>
                         <segue destination="Wyd-bn-cbH" kind="show" identifier="login_success" id="Q20-1b-AES"/>
+                        <segue destination="e8D-jK-PgU" kind="show" identifier="show_events" id="S1f-cc-4EO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-546" y="-713"/>
+            <point key="canvasLocation" x="-338" y="-777"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="dIW-VJ-4Ga">
@@ -79,7 +80,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="userNameLabel" destination="Q8U-Ns-oZp" id="Eaz-Dn-guI"/>
+                        <outlet property="userNameLabel" destination="Q8U-Ns-oZp" id="E6E-1o-5sZ"/>
                         <outlet property="userProfilePictureView" destination="Jcq-C9-sdU" id="oUy-Jj-6Tu"/>
                     </connections>
                 </viewController>
@@ -91,32 +92,35 @@
         <scene sceneID="Lt7-17-IBF">
             <objects>
                 <tableViewController id="GqG-Ny-f5O" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="QQF-KZ-w7l">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="QQF-KZ-w7l" customClass="EventsTableView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="g5T-1H-cic">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="g5T-1H-cic" customClass="EventTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g5T-1H-cic" id="emg-na-FHK">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JND-jz-ApT">
-                                            <rect key="frame" x="0.0" y="-1" width="60" height="60"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="60" id="4a1-hG-5HQ"/>
-                                                <constraint firstAttribute="width" constant="60" id="9Wc-9D-2ek"/>
-                                            </constraints>
-                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tk-UB-C7D">
+                                            <rect key="frame" x="80" y="20" width="500" height="40"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dya-3o-QqW">
+                                            <rect key="frame" x="10" y="10" width="60" height="60"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="centerY" secondItem="JND-jz-ApT" secondAttribute="centerY" constant="11" id="0Qk-eF-R4Q"/>
-                                        <constraint firstItem="JND-jz-ApT" firstAttribute="leading" secondItem="emg-na-FHK" secondAttribute="leadingMargin" constant="10" id="UQw-1B-TAi"/>
-                                        <constraint firstItem="JND-jz-ApT" firstAttribute="top" secondItem="emg-na-FHK" secondAttribute="topMargin" constant="10" id="g8x-GR-jXo"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="JND-jz-ApT" secondAttribute="bottom" constant="10" id="sqA-kQ-DGu"/>
+                                        <constraint firstAttribute="centerX" secondItem="3tk-UB-C7D" secondAttribute="centerX" constant="67.5" id="RAz-2a-pvI"/>
+                                        <constraint firstAttribute="centerY" secondItem="3tk-UB-C7D" secondAttribute="centerY" id="c2t-4s-i2L"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="eventImage" destination="Dya-3o-QqW" id="fey-Wa-Doj"/>
+                                    <outlet property="eventName" destination="3tk-UB-C7D" id="F9V-La-z1z"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
