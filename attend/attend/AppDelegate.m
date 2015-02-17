@@ -40,6 +40,8 @@
     
     // Logs 'install' and 'app activate' App Events.
     [FBAppEvents activateApp];
+    [FBAppCall handleDidBecomeActive];
+    [FBSession openActiveSessionWithAllowLoginUI:NO];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
