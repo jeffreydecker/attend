@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GERequestManager.h"
 
-@interface GEEventsViewController : UIViewController <UITabBarDelegate, UITableViewDataSource>
+@interface GEEventsViewController : UIViewController <UITabBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITabBar *eventsTabBar;
 @property (strong, nonatomic) IBOutlet UITableView *eventsTableView;

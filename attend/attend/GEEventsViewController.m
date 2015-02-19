@@ -13,6 +13,7 @@
 @interface GEEventsViewController ()
 
 @property (strong, nonatomic) NSArray *events;
+@property (strong, nonatomic) UITabBarItem *selectedTabBarItem;
 
 @end
 
@@ -26,6 +27,7 @@
     self.navigationItem.rightBarButtonItem = self.settingsButton;
     
     [self.eventsTableView setDataSource:self];
+    [self.eventsTableView setDelegate:self];
     self.eventsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.events = [[GEUserData getInstance] getEventsAttending];
@@ -38,9 +40,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-
 // TODO: Add pull to refresh feature
-// TODO: Add slide in/out animations
 
 #pragma mark - Navigation
 
@@ -48,6 +48,18 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     // TODO: Handle profile/settings view and detail view segues
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Animate cells to slide in from the right
+    cell.transform = CGAffineTransformMakeTranslation(cell.bounds.size.width * 1, 0);
+    [UIView animateWithDuration:0.25 animations:^{
+        cell.transform = CGAffineTransformIdentity;
+    }];
+    
+    // TODO: Add slide out animations
 }
 
 #pragma mark - UITableViewDataSource
@@ -89,9 +101,13 @@
     [self performSegueWithIdentifier:@"show_event_details" sender:self];
 }
 
-#pragma mark - TabBarDelegate
+#pragma mark - UITabBarDelegate
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+    
+    if ([item isEqual:self.selectedTabBarItem]) {
+        return;
+    }
     
     int index = [[tabBar items] indexOfObject:item];
     
@@ -110,6 +126,7 @@
             NSLog (@"Error");
             break;
     }
+    self.selectedTabBarItem = item;
     [self.eventsTableView reloadData];
 }
 
