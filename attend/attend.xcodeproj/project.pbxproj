@@ -12,6 +12,7 @@
 		6714B3FB1A7DA33E00F8ACA7 /* GEUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6714B3FA1A7DA33E00F8ACA7 /* GEUserData.m */; };
 		6714B4001A880AD100F8ACA7 /* GEEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6714B3FF1A880AD100F8ACA7 /* GEEventsViewController.m */; };
 		6714B4131A92E1E800F8ACA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6714B4111A92E1E800F8ACA7 /* Main.storyboard */; };
+		6797AD111AA414FE00B0EF85 /* GEEventDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6797AD101AA414FE00B0EF85 /* GEEventDetailsViewController.m */; };
 		67E10CD91A6C590700DF53DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E10CD81A6C590700DF53DD /* main.m */; };
 		67E10CDC1A6C590700DF53DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E10CDB1A6C590700DF53DD /* AppDelegate.m */; };
 		67E10CDF1A6C590700DF53DD /* attend.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67E10CDD1A6C590700DF53DD /* attend.xcdatamodeld */; };
@@ -43,6 +44,8 @@
 		6714B3FE1A880AD100F8ACA7 /* GEEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEEventsViewController.h; sourceTree = "<group>"; };
 		6714B3FF1A880AD100F8ACA7 /* GEEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEEventsViewController.m; sourceTree = "<group>"; };
 		6714B4121A92E1E800F8ACA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6797AD0F1AA414FE00B0EF85 /* GEEventDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEEventDetailsViewController.h; sourceTree = "<group>"; };
+		6797AD101AA414FE00B0EF85 /* GEEventDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEEventDetailsViewController.m; sourceTree = "<group>"; };
 		67E10CD31A6C590700DF53DD /* attend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = attend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E10CD71A6C590700DF53DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67E10CD81A6C590700DF53DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 				67E10CDD1A6C590700DF53DD /* attend.xcdatamodeld */,
 				67E10CE61A6C590700DF53DD /* Images.xcassets */,
 				67E10CD61A6C590700DF53DD /* Supporting Files */,
+				6797AD0F1AA414FE00B0EF85 /* GEEventDetailsViewController.h */,
+				6797AD101AA414FE00B0EF85 /* GEEventDetailsViewController.m */,
 			);
 			path = attend;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 			files = (
 				67E10CDC1A6C590700DF53DD /* AppDelegate.m in Sources */,
 				6714B3FB1A7DA33E00F8ACA7 /* GEUserData.m in Sources */,
+				6797AD111AA414FE00B0EF85 /* GEEventDetailsViewController.m in Sources */,
 				67E10CDF1A6C590700DF53DD /* attend.xcdatamodeld in Sources */,
 				94C681AF1A7A025E0051020B /* EventTableViewCell.m in Sources */,
 				67E10CE21A6C590700DF53DD /* ViewController.m in Sources */,

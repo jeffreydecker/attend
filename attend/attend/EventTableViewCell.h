@@ -11,4 +11,5 @@
 @interface EventTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *eventImage;
 @property (strong, nonatomic) IBOutlet UILabel *eventName;
+@property (strong, nonatomic) IBOutlet UIView *colorOverlay;
 @end
